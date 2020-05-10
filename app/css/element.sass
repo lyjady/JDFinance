@@ -1,0 +1,31 @@
+@charset "UTF-8"
+@import "./layout"
+
+@mixin btn($size: 14px, $color: #FFFFFF, $bgColor: #F04752, $padding: 5px, $radius: 5px)
+  display: inline-block
+  padding: $padding
+  border: 1px solid $bgColor
+  border-radius: $radius
+  background-color: $bgColor
+  color: $color
+  text-align: center
+  font-size: $size
+  line-height: 1
+
+@mixin list($direction: column)
+  @include flex($direction)
+
+@mixin panel($bgColor: #FFFFFF, $padding: 0, $margin: 20px 0, $height: 112px, $textPadding: 0 32px, $color: #333333, $size: 32px)
+  background-color: $bgColor
+  padding: $padding
+  margin: $margin
+  > h4
+    height: $height
+    line-height: $height
+    padding: $textPadding
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+    text-align: center
+    color: $color
+    font-size: $size
